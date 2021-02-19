@@ -1,5 +1,5 @@
 const fs = require('fs')
-
+let path = require('path')
 
 const dirName1800 = `${__dirname}/1800`
 const dirName2000 = `${__dirname}/2000`
@@ -38,14 +38,14 @@ fs.readdir(dirName2000, ((err, files) => {
         return
     }
     files.forEach(fileName => {
-        fs.readFile(dirName2000 + `/${fileName}`, ((err1, stats) => {
+        fs.readFile( path.join(dirName2000, `${fileName}`), ((err1, stats) => {
             if (err1) {
                 console.log(err)
                 return
             }
             let person = JSON.parse(stats)
             if (person.gender === 'male') {
-                fs.rename(dirName2000 + `/${fileName}`, dirName1800 + `/${fileName}`, err2 => {
+                fs.rename(path.join(dirName2000, `${fileName}`), path.join(dirName1800, `${fileName}`), err2 => {
                     if (err2) {
                         console.log(err2)
                     }
@@ -60,10 +60,10 @@ fs.readdir(dirName1800, ((err, files) => {
             console.log(err)
         }
         files.forEach(fileName => {
-            fs.readFile(dirName1800 + `/${fileName}`, (err1, data) => {
+            fs.readFile(path.join(dirName1800, `${fileName}`), (err1, data) => {
                 let person = JSON.parse(data)
                 if (person.gender === 'female') {
-                    fs.rename(dirName1800 + `/${fileName}`, dirName2000 + `/${fileName}`, err2 => {
+                    fs.rename(path.join(dirName1800, `${fileName}`), path.join(dirName2000, `${fileName}`), err2 => {
                         console.log(err2)
                     })
                 }
