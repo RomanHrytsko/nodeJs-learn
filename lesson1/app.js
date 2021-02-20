@@ -1,4 +1,4 @@
-const x = require('./dir/file')
+const x = require('../junk/dir/file')
 
 
 // x.createUser('Roman', 22)
