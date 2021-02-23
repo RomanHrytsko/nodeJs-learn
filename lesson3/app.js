@@ -8,9 +8,9 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
+app.use('/', apiRouter)
 
 app.listen(5000,() =>{
     console.log('port 5000 is active')
 })
 
-app.use('/', apiRouter)
