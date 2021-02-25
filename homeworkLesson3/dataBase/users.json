@@ -1,47 +1,5 @@
 [
   {
-    "name": "Orest",
-    "age": 22,
-    "gender": "male",
-    "email": "123abc1@gmail.com",
-    "password": 123
-  },
-  {
-    "name": "Vika",
-    "age": 22,
-    "gender": "female",
-    "email": "123abc2@gmail.com",
-    "password": 1234
-  },
-  {
-    "name": "Tania",
-    "age": 22,
-    "gender": "female",
-    "email": "123abc3@gmail.com",
-    "password": 1235
-  },
-  {
-    "name": "Ira",
-    "age": 22,
-    "gender": "female",
-    "email": "123abc4@gmail.com",
-    "password": 1236
-  },
-  {
-    "name": "Vlad",
-    "age": 22,
-    "gender": "male",
-    "email": "123abc5@gmail.com",
-    "password": 1237
-  },
-  {
-    "name": "Nazar",
-    "age": 22,
-    "gender": "male",
-    "email": "123abc6@gmail.com",
-    "password": 1238
-  },
-  {
     "name": "Ostap",
     "age": 22,
     "gender": "male",
@@ -68,6 +26,19 @@
     "gender": "male",
     "email": "123abc10@gmail.com",
     "password": 12312
+  },
+  {
+    "name": "Mykola",
+    "age": 22,
+    "gender": "male",
+    "email": "123adsbc10@gmail.com",
+    "password": 12312
+  },
+  {
+    "name": "Orest",
+    "age": 22,
+    "gender": "male",
+    "email": "123asbc1@gmail.com",
+    "password": 123
   }
-
 ]
