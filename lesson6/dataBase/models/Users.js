@@ -3,7 +3,8 @@ const { Schema, model } = require('mongoose');
 const userScheme = new Schema({
     name: { type: String, required: true },
     age: { type: Number, default: 15 },
-    cars: [{ type: Schema.Types.ObjectId }]
+    cars: [{ type: Schema.Types.ObjectId }],
+    password: { type: String }
 }, { timestamps: true, toObject: { virtuals: true }, toJSON: { virtuals: true } });
 
 userScheme.virtual('full_name').get(function() {
@@ -16,10 +17,10 @@ userScheme.virtual('full_name').get(function() {
 //     foreignField: '_id'
 // });
 
-userScheme.pre('find', function() {
-    this.populate('userCars');
-})
-    .pre('findOne', function() {
-        this.populate('userCars');
-    });
+// userScheme.pre('find', function() {
+//     this.populate('userCars');
+// })
+//     .pre('findOne', function() {
+//         this.populate('userCars');
+//     });
 module.exports = model('User', userScheme);
