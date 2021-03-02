@@ -10,11 +10,11 @@ userScheme.virtual('full_name').get(function() {
     return `${this.name} ${this.age}`;
 });
 
-userScheme.virtual('userCars', {
-    ref: 'Car',
-    localField: 'cars',
-    foreignField: '_id'
-});
+// userScheme.virtual('userCars', {
+//     ref: 'Car',
+//     localField: 'cars',
+//     foreignField: '_id'
+// });
 
 userScheme.pre('find', function() {
     this.populate('userCars');
