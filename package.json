@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/RomanHrytsko/nodeJs-learn#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.11.18"
   },
   "devDependencies": {
     "nodemon": "^2.0.6",
